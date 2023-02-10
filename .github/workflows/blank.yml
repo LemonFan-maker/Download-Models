@@ -2,8 +2,8 @@ name: CI
 on:
   workflow_dispatch:
     inputs:
-      link:
-        required: true
+      #link:
+      #  required: true
       name:
         required: true
 jobs:
@@ -14,7 +14,10 @@ jobs:
       - name: Download
         run: |
           mkdir /home/runner/download && cd /home/runner/download
-          ${{ inputs.link }}
+          aria2c -x 16 -s 32 "https://cn-beijing-data.aliyundrive.net/4FafMijw%2F67998321%2F635fc173b18862cb85b54bdd9a2b4df10cbe7647%2F635fc173d34fff5c7a9346dc99e4f11e3b198b67?di=bj29&dr=62270961&f=63e64c351001ee6b8b4d415496757c8a895fa0cf&security-token=CAIS%2BgF1q6Ft5B2yfSjIr5fFMdL524924ZSJcGXghnADSrtgnZ%2F%2BuDz2IHFPeHJrBeAYt%2FoxmW1X5vwSlq5rR4QAXlDfNWTvIWTbqVHPWZHInuDox55m4cTXNAr%2BIhr%2F29CoEIedZdjBe%2FCrRknZnytou9XTfimjWFrXWv%2Fgy%2BQQDLItUxK%2FcCBNCfpPOwJms7V6D3bKMuu3OROY6Qi5TmgQ41Uh1jgjtPzkkpfFtkGF1GeXkLFF%2B97DRbG%2FdNRpMZtFVNO44fd7bKKp0lQLukMWr%2Fwq3PIdp2ma447NWQlLnzyCMvvJ9OVDFyN0aKEnH7J%2Bq%2FzxhTPrMnpkSlacGoABHVycZF2luZVknuXWFH3Fz8Jz9ESQEe4S9Nsi7ZOHzED6Wpn9TZdWWJmXu9a4GZBvTrCr0nnFoEA1NSgE8SDFwBTxMINex6ffB8TFcu4RZcflLzmazvtGypaqhnvgLQQ4ksNRULWChGZIR6LFxFJgvWk03lOwh5ERahJUCTn52tU%3D&u=ecf06f992fed4160b731cd621dac2533&x-oss-access-key-id=STS.NTpzhM6PWVVbrCQbpVF4LrZUZ&x-oss-additional-headers=referer&x-oss-expires=1676052008&x-oss-signature=MKc1Zy8%2FN1nab%2B09ToQ0wxtIpuUkfnjOizRNlgv2p34%3D&x-oss-signature-version=OSS2" --out "City.h5" --header "Referer: https://www.aliyundrive.com/"
+          aria2c -x 16 -s 32 "https://cn-beijing-data.aliyundrive.net/McgUVGxw%2F67998321%2F635fc18ca27cdf2501284ea8918cfc15020ada33%2F635fc18c258257e5e3364a0f9bedcfad2ecd60f3?di=bj29&dr=62270961&f=63e64b3f7034fb8d3af24a4a8ac5dd6b40d116b6&security-token=CAIS%2BgF1q6Ft5B2yfSjIr5fFMdL524924ZSJcGXghnADSrtgnZ%2F%2BuDz2IHFPeHJrBeAYt%2FoxmW1X5vwSlq5rR4QAXlDfNWTvIWTbqVHPWZHInuDox55m4cTXNAr%2BIhr%2F29CoEIedZdjBe%2FCrRknZnytou9XTfimjWFrXWv%2Fgy%2BQQDLItUxK%2FcCBNCfpPOwJms7V6D3bKMuu3OROY6Qi5TmgQ41Uh1jgjtPzkkpfFtkGF1GeXkLFF%2B97DRbG%2FdNRpMZtFVNO44fd7bKKp0lQLukMWr%2Fwq3PIdp2ma447NWQlLnzyCMvvJ9OVDFyN0aKEnH7J%2Bq%2FzxhTPrMnpkSlacGoABHVycZF2luZVknuXWFH3Fz8Jz9ESQEe4S9Nsi7ZOHzED6Wpn9TZdWWJmXu9a4GZBvTrCr0nnFoEA1NSgE8SDFwBTxMINex6ffB8TFcu4RZcflLzmazvtGypaqhnvgLQQ4ksNRULWChGZIR6LFxFJgvWk03lOwh5ERahJUCTn52tU%3D&u=ecf06f992fed4160b731cd621dac2533&x-oss-access-key-id=STS.NTpzhM6PWVVbrCQbpVF4LrZUZ&x-oss-additional-headers=referer&x-oss-expires=1676052008&x-oss-signature=lwve9qAIkG8aSRQfz0CIYL39NBEePOQP%2BfjsWAEmwu0%3D&x-oss-signature-version=OSS2" --out "Light.h5" --header "Referer: https://www.aliyundrive.com/"
+          aria2c -x 16 -s 32 "https://cn-beijing-data.aliyundrive.net/WqutGylk%2F70759671%2F63e111f4a02d1e92d7e347239145926f320052ca%2F63e111f47eed7da828cf420eb38f381727d90fd6?di=bj29&dr=62270961&f=63e643e876efc4efd4e14f1b82c2f8a9069aa6aa&security-token=CAIS%2BgF1q6Ft5B2yfSjIr5fFMdL524924ZSJcGXghnADSrtgnZ%2F%2BuDz2IHFPeHJrBeAYt%2FoxmW1X5vwSlq5rR4QAXlDfNWTvIWTbqVHPWZHInuDox55m4cTXNAr%2BIhr%2F29CoEIedZdjBe%2FCrRknZnytou9XTfimjWFrXWv%2Fgy%2BQQDLItUxK%2FcCBNCfpPOwJms7V6D3bKMuu3OROY6Qi5TmgQ41Uh1jgjtPzkkpfFtkGF1GeXkLFF%2B97DRbG%2FdNRpMZtFVNO44fd7bKKp0lQLukMWr%2Fwq3PIdp2ma447NWQlLnzyCMvvJ9OVDFyN0aKEnH7J%2Bq%2FzxhTPrMnpkSlacGoABHVycZF2luZVknuXWFH3Fz8Jz9ESQEe4S9Nsi7ZOHzED6Wpn9TZdWWJmXu9a4GZBvTrCr0nnFoEA1NSgE8SDFwBTxMINex6ffB8TFcu4RZcflLzmazvtGypaqhnvgLQQ4ksNRULWChGZIR6LFxFJgvWk03lOwh5ERahJUCTn52tU%3D&u=ecf06f992fed4160b731cd621dac2533&x-oss-access-key-id=STS.NTpzhM6PWVVbrCQbpVF4LrZUZ&x-oss-additional-headers=referer&x-oss-expires=1676052008&x-oss-signature=mnrGNm8uRnZoavZdB41gauqfVUQj%2F8mThMHMLwChpOI%3D&x-oss-signature-version=OSS2" --out "Expand.h5" --header "Referer: https://www.aliyundrive.com/"
+
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
